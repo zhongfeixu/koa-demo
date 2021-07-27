@@ -1,0 +1,24 @@
+{
+  "name": "koa-demo",
+  "version": "1.0.0",
+  "description": "koa-基础架构",
+  "main": "index.js",
+  "scripts": {
+    "start":"node ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhongfeixu/koa-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhongfeixu/koa-demo/issues"
+  },
+  "homepage": "https://github.com/zhongfeixu/koa-demo#readme",
+  "dependencies": {
+    "koa": "^2.13.1",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0"
+  }
+}

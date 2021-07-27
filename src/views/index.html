@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>koa-demo</title>
+</head>
+<style>
+    #app {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+    }
+</style>
+
+<body>
+    <div id="app">hello world</div>
+
+    <script>
+        const $app = document.querySelector("#app");
+        $app.onclick = function () {
+            fetch('/login', {
+                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                credentials: 'include', // include, same-origin, *omit
+                headers: {
+                    'user-agent': 'Mozilla/4.0 MDN Example',
+                    'content-type': 'application/json'
+                },
+                method: 'GET', // *GET, POST, PUT, DELETE, etc.
+                mode: 'cors', // no-cors, cors, *same-origin
+                redirect: 'follow', // manual, *follow, error
+                referrer: 'no-referrer', // *client, no-referrer
+            })
+                .then(response => response.json()) // parses response to JSON
+                .then(ret => {
+                    console.log(ret,'ret')
+                    $app.innerHTML = ret.name
+                }) // parses response to JSON
+        }
+    </script>
+</body>
+
+</html>
